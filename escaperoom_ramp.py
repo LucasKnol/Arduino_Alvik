@@ -67,6 +67,14 @@ def blink_purple():
     
         i += 1
 
+# for i in range(3): 
+  # alvik.left_led.set_color(255, 0, 255) 
+  # bright purple (red + blue) 
+  # alvik.right_led.set_color(255, 0, 255) 
+  # delay(500) 
+  # alvik.left_led.set_color(0, 0, 0) # off # alvik.right_led.set_color(0, 0, 0) 
+  # delay(500)
+
 
 def cleanup():
     alvik.stop()
