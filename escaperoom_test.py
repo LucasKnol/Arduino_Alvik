@@ -7,7 +7,7 @@ exitDistance = 0
 complete = False
 
 def calibration(alvik):
-    """Rotate to find the largest (farthest) distance — the exit box."""
+    #Rotate to find the largest (farthest) distance — the exit box.
     global Distance, exitDistance
     
     alvik.set_wheels_speed(-15, 15)  # Rotate in place
@@ -16,7 +16,7 @@ def calibration(alvik):
         delay(10)
         if center > Distance:
             Distance = center
-            # Flash LEDs when new max found
+            # Flash LEDs when new max distance found
             alvik.left_led.set_color(1, 0, 0)
             alvik.right_led.set_color(1, 0, 0)
             delay(100)
@@ -29,7 +29,7 @@ def calibration(alvik):
     delay(1000)
 
 def celebration_dance(alvik):
-    """Do a quick celebration sequence with LEDs and motion."""
+    #Do a quick celebration sequence with LEDs and motion when it has left the puzzle.
     # Spin right
     alvik.left_led.set_color(1, 0, 0)
     alvik.right_led.set_color(0, 1, 0)
